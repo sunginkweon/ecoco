@@ -122,6 +122,11 @@
                 android:text="@string/용기"
                 app:buttonTint="@color/green" />
 
+            <FrameLayout
+                android:id="@+id/main_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
         </LinearLayout>
     </ScrollView>
 
@@ -139,20 +144,6 @@
         app:layout_constraintTop_toBottomOf="@+id/scrollView2"
         app:layout_constraintVertical_bias="0.25" />
 
-    <EditText
-        android:id="@+id/editTextNumber"
-        android:layout_width="106dp"
-        android:layout_height="45dp"
-        android:layout_marginTop="48dp"
-        android:autofillHints=""
-        android:ems="10"
-        android:inputType="number"
-        android:textColor="@color/green"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.718"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/scrollView2" />
-
     <SearchView
         android:layout_width="315dp"
         android:layout_height="26dp"
@@ -160,12 +151,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
-    <FrameLayout
-        android:id="@+id/main_layout"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginBottom="?attr/actionBarSize"/>
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/nav_view"
