@@ -13,4 +13,7 @@
     <string name="용기">장볼때 용기내기</string>
     <string name="button">Button</string>
     <string name="calendar">calendar</string>
+    <string name="g_co2">오늘 총 g Co2를 줄였습니다</string>
+    <string name="오늘">오늘 줄인 탄소 :</string>
+    <string name="todo">TODO</string>
 </resources>
