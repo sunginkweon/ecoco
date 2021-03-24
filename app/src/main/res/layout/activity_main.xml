@@ -27,12 +27,100 @@
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="45dp"
+        android:layout_marginTop="40dp"
         android:rotationX="0"
         android:text="@string/daily"
+        android:textColor="@color/green"
+        android:textSize="18sp"
         android:visibility="visible"
         app:layout_constraintTop_toBottomOf="@+id/textView"
-        tools:layout_editor_absoluteX="53dp"
+        tools:layout_editor_absoluteX="56dp"
         tools:visibility="visible" />
+
+    <ScrollView
+        android:layout_width="320dp"
+        android:layout_height="355dp"
+        android:layout_marginTop="200dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <CheckBox
+                android:id="@+id/checkBox3"
+                android:layout_width="243dp"
+                android:layout_height="45dp"
+                android:text="@string/x"
+                app:buttonTint="@color/green" />
+
+            <CheckBox
+                android:id="@+id/checkBox"
+                android:layout_width="243dp"
+                android:layout_height="47dp"
+                android:text="@string/_5"
+                app:buttonTint="@color/green" />
+
+            <CheckBox
+                android:id="@+id/checkBox4"
+                android:layout_width="242dp"
+                android:layout_height="44dp"
+                android:text="@string/_1"
+                app:buttonTint="@color/green" />
+
+            <CheckBox
+                android:id="@+id/checkBox5"
+                android:layout_width="276dp"
+                android:layout_height="44dp"
+                android:text="@string/대중교통"
+                app:buttonTint="@color/green" />
+
+            <CheckBox
+                android:id="@+id/checkBox6"
+                android:layout_width="276dp"
+                android:layout_height="44dp"
+                android:text="@string/_50g"
+                app:buttonTint="@color/green" />
+
+            <CheckBox
+                android:id="@+id/checkBox8"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:text="하루 육류 섭취 X"
+                app:buttonTint="@color/green" />
+
+            <CheckBox
+                android:id="@+id/checkBox9"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:text="식물 키우기"
+                app:buttonTint="@color/green" />
+
+            <CheckBox
+                android:id="@+id/checkBox10"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:text="분리수거 확실히 하기"
+                app:buttonTint="@color/green" />
+
+            <CheckBox
+                android:id="@+id/checkBox11"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:text='장볼때 "용기"내기'
+                app:buttonTint="@color/green" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:layout_width="415dp"
+        android:layout_height="45dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="686dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

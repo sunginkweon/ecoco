@@ -2,4 +2,9 @@
     <string name="app_name">ecoco</string>
     <string name="home">HOME</string>
     <string name="daily">daily</string>
+    <string name="x">일회용품 사용 X</string>
+    <string name="_5">샤워시간 5분 이하</string>
+    <string name="_1">보일러 사용 1시간 줄이기</string>
+    <string name="대중교통">차량대신 대중교통, 자전거 이용</string>
+    <string name="_50g">하루 육류 섭취 50g이하</string>
 </resources>
