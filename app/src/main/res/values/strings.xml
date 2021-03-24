@@ -16,4 +16,7 @@
     <string name="g_co2">오늘 총 g Co2를 줄였습니다</string>
     <string name="오늘">오늘 줄인 탄소 :</string>
     <string name="todo">TODO</string>
+    <string name="cast">Cast</string>
+    <string name="캐릭터">나의캐릭터</string>
+    <string name="프로필">프로필</string>
 </resources>
