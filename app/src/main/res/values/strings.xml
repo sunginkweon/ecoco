@@ -7,4 +7,8 @@
     <string name="_1">보일러 사용 1시간 줄이기</string>
     <string name="대중교통">차량대신 대중교통, 자전거 이용</string>
     <string name="_50g">하루 육류 섭취 50g이하</string>
+    <string name="육X">하루 육류 섭취 X</string>
+    <string name="분리수거">분리수거 확실히 하기</string>
+    <string name="식물">식물 키우기</string>
+    <string name="용기">장볼때 용기내기</string>
 </resources>
