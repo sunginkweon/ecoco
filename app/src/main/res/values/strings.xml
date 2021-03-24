@@ -11,4 +11,6 @@
     <string name="분리수거">분리수거 확실히 하기</string>
     <string name="식물">식물 키우기</string>
     <string name="용기">장볼때 용기내기</string>
+    <string name="button">Button</string>
+    <string name="calendar">calendar</string>
 </resources>
