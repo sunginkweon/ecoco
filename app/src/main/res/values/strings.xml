@@ -2,15 +2,15 @@
     <string name="app_name">ecoco</string>
     <string name="home">HOME</string>
     <string name="daily">daily</string>
-    <string name="x">일회용품 사용 X</string>
-    <string name="_5">샤워시간 5분 이하</string>
-    <string name="_1">보일러 사용 1시간 줄이기</string>
-    <string name="대중교통">차량대신 대중교통, 자전거 이용</string>
-    <string name="_50g">하루 육류 섭취 50g이하</string>
-    <string name="육X">하루 육류 섭취 X</string>
-    <string name="분리수거">분리수거 확실히 하기</string>
-    <string name="식물">식물 키우기</string>
-    <string name="용기">장볼때 용기내기</string>
+    <string name="x">일회용품 사용 X (2pt)</string>
+    <string name="_5">샤워시간 5분 이하 (1pt)</string>
+    <string name="_1">보일러 사용 1시간 줄이기 (3pt)</string>
+    <string name="대중교통">차량대신 대중교통, 자전거 이용 (5pt)</string>
+    <string name="_50g">하루 육류 섭취 50g이하 (10pt)</string>
+    <string name="육X">하루 육류 섭취 X (5pt추가)</string>
+    <string name="분리수거">분리수거 확실히 하기 (2pt)</string>
+    <string name="식물">식물 키우기 (1pt)</string>
+    <string name="용기">장볼때 용기내기 (3pt)</string>
     <string name="button">Button</string>
     <string name="calendar">calendar</string>
     <string name="g_co2">오늘 총 g Co2를 줄였습니다</string>
@@ -19,4 +19,9 @@
     <string name="cast">Cast</string>
     <string name="캐릭터">나의캐릭터</string>
     <string name="프로필">프로필</string>
+    <string name="today">TODAY</string>
+    <string name="cal">달력</string>
+    <string name="cha">나의 캐릭터</string>
+    <string name="tiger">뱅갈호랑이</string>
+    <string name="profile">프로필</string>
 </resources>
