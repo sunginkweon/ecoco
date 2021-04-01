@@ -11,8 +11,8 @@
         android:theme="@style/Theme.Ecoco"
         android:fullBackupContent="true"
         >
-        <activity
-            android:name=".SplashActivity">
+        <activity android:name=".MainActivity"/>
+        <activity android:name=".SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
