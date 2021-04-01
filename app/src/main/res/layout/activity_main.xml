@@ -37,9 +37,12 @@
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/nav_view"
+        android:layout_marginEnd="0dp"
+        android:layout_marginStart="0dp"
+        android:layout_gravity="bottom"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="?android:attr/windowBackground"
+        android:background="#F0F0F0"
         app:itemIconTint="@color/green"
         app:itemTextColor="@color/green"
         app:layout_constraintBottom_toBottomOf="parent"
