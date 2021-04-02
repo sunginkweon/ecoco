@@ -18,11 +18,12 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView8">
 
+
             <Button
                 android:id="@+id/button2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="12dp"
+                android:layout_marginBottom="20dp"
                 android:gravity="start|center"
                 android:text="@string/ChangeProfile"
                 android:textColor="#2E6D12"
