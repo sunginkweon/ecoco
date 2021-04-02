@@ -9,6 +9,7 @@ import androidx.fragment.app.FragmentTransaction;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.CheckBox;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
@@ -20,14 +21,12 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         mBottomNV = findViewById(R.id.nav_view);
-        mBottomNV.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() { //NavigationItemSelecte
-            @Override
-            public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
-                BottomNavigate(menuItem.getItemId());
+        //NavigationItemSelecte
+        mBottomNV.setOnNavigationItemSelectedListener(menuItem -> {
+            BottomNavigate(menuItem.getItemId());
 
 
-                return true;
-            }
+            return true;
         });
         mBottomNV.setSelectedItemId(R.id.navigation_1);
     }
@@ -61,8 +60,7 @@ public class MainActivity extends AppCompatActivity {
         fragmentTransaction.setPrimaryNavigationFragment(fragment);
         fragmentTransaction.setReorderingAllowed(true);
         fragmentTransaction.commitNow();
-
-
     }
+
 
 }

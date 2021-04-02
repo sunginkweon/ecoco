@@ -9,48 +9,37 @@
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:fontFamily="@font/nanumbarungothic"
         android:text="@string/today"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         android:textColor="#2E6D12"
-        android:textSize="36sp"
+        android:textSize="40sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.182"
+        app:layout_constraintHorizontal_bias="0.08"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.09" />
+        app:layout_constraintVertical_bias="0.1" />
 
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="317dp"
-        android:layout_height="28dp"
-        android:rotationX="0"
-        android:text="@string/daily"
-        android:textColor="@color/green"
-        android:textSize="18sp"
-        android:visibility="visible"
-        app:layout_constraintBottom_toTopOf="@+id/scrollView2"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.489"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.732"
-        tools:visibility="visible" />
 
     <ScrollView
         android:id="@+id/scrollView2"
-        android:layout_width="320dp"
-        android:layout_height="355dp"
-        android:layout_marginTop="200dp"
+        android:layout_width="350dp"
+        android:layout_height="500dp"
         android:scrollbarFadeDuration="100"
         android:scrollbarSize="10dp"
         android:scrollbarStyle="insideInset"
-        android:scrollbarThumbHorizontal="@color/green"
-        android:scrollbarThumbVertical="@color/green"
+        android:scrollbarThumbHorizontal="@color/main1"
+        android:scrollbarThumbVertical="@color/main1"
+        android:scrollbarAlwaysDrawVerticalTrack="true"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.36"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.8">
+
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -58,67 +47,95 @@
             android:orientation="vertical">
 
             <CheckBox
-                android:id="@+id/checkBox3"
-                android:layout_width="243dp"
-                android:layout_height="45dp"
-                android:text="@string/x"
-                app:buttonTint="@color/green" />
-
-            <CheckBox
-                android:id="@+id/checkBox"
-                android:layout_width="243dp"
-                android:layout_height="47dp"
-                android:text="@string/_5"
-                app:buttonTint="@color/green" />
-
-            <CheckBox
-                android:id="@+id/checkBox4"
-                android:layout_width="242dp"
-                android:layout_height="44dp"
-                android:text="@string/_1"
-                app:buttonTint="@color/green" />
-
-            <CheckBox
-                android:id="@+id/checkBox5"
-                android:layout_width="276dp"
-                android:layout_height="44dp"
-                android:text="@string/대중교통"
-                app:buttonTint="@color/green" />
-
-            <CheckBox
-                android:id="@+id/checkBox6"
-                android:layout_width="276dp"
-                android:layout_height="44dp"
-                android:text="@string/_50g"
-                app:buttonTint="@color/green" />
-
-            <CheckBox
-                android:id="@+id/checkBox8"
+                android:id="@+id/test1"
                 android:layout_width="match_parent"
-                android:layout_height="44dp"
-                android:text="@string/육X"
-                app:buttonTint="@color/green" />
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/nanumbarungothic"
+                android:text="@string/testCB"
+                android:textColor="@color/black"
+                app:buttonTint="@color/main1" />
 
             <CheckBox
-                android:id="@+id/checkBox9"
+                android:id="@+id/CB_NoDisposable"
                 android:layout_width="match_parent"
-                android:layout_height="44dp"
-                android:text="@string/식물"
-                app:buttonTint="@color/green" />
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/nanumbarungothic"
+                android:text="@string/NoDisposable"
+                android:textColor="@color/black"
+                app:buttonTint="@color/main1" />
 
             <CheckBox
-                android:id="@+id/checkBox10"
+                android:id="@+id/CB_Shower5"
                 android:layout_width="match_parent"
-                android:layout_height="44dp"
-                android:text="@string/분리수거"
-                app:buttonTint="@color/green" />
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/nanumbarungothic"
+                android:text="@string/Shower5"
+                android:textColor="@color/black"
+                app:buttonTint="@color/main1" />
 
             <CheckBox
-                android:id="@+id/checkBox11"
+                android:id="@+id/CB_Boiler"
                 android:layout_width="match_parent"
-                android:layout_height="44dp"
-                android:text="@string/용기"
-                app:buttonTint="@color/green" />
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/nanumbarungothic"
+                android:text="@string/Boiler"
+                android:textColor="@color/black"
+                app:buttonTint="@color/main1" />
+
+            <CheckBox
+                android:id="@+id/CB_PublicTransport"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/nanumbarungothic"
+                android:text="@string/PublicTransport"
+                android:textColor="@color/black"
+                app:buttonTint="@color/main1" />
+
+            <CheckBox
+                android:id="@+id/CB_Meat50"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/nanumbarungothic"
+                android:text="@string/Meat50"
+                android:textColor="@color/black"
+                app:buttonTint="@color/main1" />
+
+            <CheckBox
+                android:id="@+id/CB_NoMeat"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/nanumbarungothic"
+                android:text="@string/NoMeat"
+                android:textColor="@color/black"
+                app:buttonTint="@color/main1" />
+
+            <CheckBox
+                android:id="@+id/CB_Plant"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/nanumbarungothic"
+                android:text="@string/Plant"
+                android:textColor="@color/black"
+                app:buttonTint="@color/main1" />
+
+            <CheckBox
+                android:id="@+id/CB_SeperateCollection"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/nanumbarungothic"
+                android:text="@string/SeperateCollection"
+                android:textColor="@color/black"
+                app:buttonTint="@color/main1" />
+
+            <CheckBox
+                android:id="@+id/CB_Container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/nanumbarungothic"
+                android:text="@string/Container"
+                android:textColor="@color/black"
+                app:buttonTint="@color/main1" />
+
 
             <FrameLayout
                 android:id="@+id/main_layout"
@@ -132,14 +149,27 @@
         android:id="@+id/textView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/오늘"
-        android:textColor="@color/green"
+        android:fontFamily="@font/nanumbarungothic"
+        android:text="@string/Total"
+        android:textColor="@color/main1"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.198"
+        app:layout_constraintHorizontal_bias="0.672"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/scrollView2"
-        app:layout_constraintVertical_bias="0.25" />
+        app:layout_constraintVertical_bias="0.0" />
+
+    <SearchView
+        android:layout_width="351dp"
+        android:layout_height="30dp"
+        android:layout_marginBottom="16dp"
+        android:background="@color/main1"
+        app:layout_constraintBottom_toTopOf="@+id/scrollView2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.366"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.931" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
