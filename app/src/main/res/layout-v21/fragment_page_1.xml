@@ -25,20 +25,20 @@
 
     <ScrollView
         android:id="@+id/scrollView2"
-        android:layout_width="350dp"
-        android:layout_height="500dp"
+        android:layout_width="326dp"
+        android:layout_height="475dp"
+        android:scrollbarAlwaysDrawVerticalTrack="true"
         android:scrollbarFadeDuration="100"
         android:scrollbarSize="10dp"
         android:scrollbarStyle="insideInset"
         android:scrollbarThumbHorizontal="@color/main1"
         android:scrollbarThumbVertical="@color/main1"
-        android:scrollbarAlwaysDrawVerticalTrack="true"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.36"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.8">
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintVertical_bias="0.0">
 
 
         <LinearLayout
@@ -54,6 +54,7 @@
                 android:text="@string/testCB"
                 android:textColor="@color/black"
                 app:buttonTint="@color/main1" />
+
             <CheckBox
                 android:id="@+id/test2"
                 android:layout_width="match_parent"
@@ -62,6 +63,7 @@
                 android:text="@string/testCB"
                 android:textColor="@color/black"
                 app:buttonTint="@color/main1" />
+
             <CheckBox
                 android:id="@+id/test3"
                 android:layout_width="match_parent"
@@ -176,17 +178,14 @@
         app:layout_constraintTop_toBottomOf="@+id/scrollView2"
         app:layout_constraintVertical_bias="0.5" />
 
-    <SearchView
-        android:layout_width="351dp"
-        android:layout_height="30dp"
-        android:layout_marginBottom="16dp"
-        android:background="@color/main1"
-        android:searchIcon="@drawable/search"
-        app:layout_constraintBottom_toTopOf="@+id/scrollView2"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.366"
+    <Button
+        android:id="@+id/button8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text='"저장"'
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/textView4"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.931" />
+        app:layout_constraintTop_toBottomOf="@+id/scrollView2" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

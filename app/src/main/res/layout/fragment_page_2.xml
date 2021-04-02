@@ -39,6 +39,35 @@
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.414" />
+            app:layout_constraintVertical_bias="0.32" />
+
+        <LinearLayout
+            android:layout_width="363dp"
+            android:layout_height="180dp"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/calendarView"
+            app:layout_constraintVertical_bias="0.0">
+
+            <TextView
+                android:id="@+id/first"
+                android:layout_width="332dp"
+                android:layout_height="57dp"
+                android:text="가장 높은 활동" />
+
+            <TextView
+                android:id="@+id/second"
+                android:layout_width="332dp"
+                android:layout_height="57dp"
+                android:text="두번째 활동" />
+
+            <TextView
+                android:id="@+id/total"
+                android:layout_width="332dp"
+                android:layout_height="57dp"
+                android:text="총 몇 mg의 탄소를 아꼈습니다" />
+        </LinearLayout>
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 </LinearLayout>
