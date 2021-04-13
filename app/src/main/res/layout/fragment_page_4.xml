@@ -24,75 +24,52 @@
             app:layout_constraintVertical_bias="0.1" />
 
 
-
         <LinearLayout
+            android:id="@+id/linearLayout"
             android:layout_width="360dp"
             android:layout_height="wrap_content"
             android:orientation="vertical"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.588"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView8"
-            app:layout_constraintVertical_bias="0.16">
+            app:layout_constraintVertical_bias="0.2">
 
-            <TextView
+            <Button
                 android:id="@+id/ChangeProfile"
-                android:text="@string/ChangeProfile"
-                style="@style/TextMenu"/>
+                style="@style/TextMenu"
+                android:text="@string/ChangeProfile" />
 
-            <TextView
+            <Button
                 android:id="@+id/Logout"
-                android:text="@string/Logout"
-                style="@style/TextMenu"/>
+                style="@style/TextMenu"
+                android:text="@string/Logout" />
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp" />
-
-            <TextView
+            <Button
                 android:id="@+id/SendFeedback"
-                android:text="@string/SendFeedback"
-                style="@style/TextMenu"/>
+                style="@style/TextMenu"
+                android:text="@string/SendFeedback" />
 
-
-            <TextView
+            <Button
                 android:id="@+id/AppRate"
-                android:text="@string/AppRate"
-                style="@style/TextMenu"/>
+                style="@style/TextMenu"
+                android:text="@string/AppRate" />
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp" />
-
-            <TextView
+            <Button
                 android:id="@+id/More"
-                android:text="@string/More"
-                style="@style/TextMenu"/>
+                style="@style/TextMenu"
+                android:text="@string/More" />
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp" />
-
-            <TextView
+            <Button
                 android:id="@+id/Developers"
-                android:text="@string/Developers"
-                style="@style/TextMenu"/>
+                style="@style/TextMenu"
+                android:text="@string/Developers" />
 
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp" />
-
-            <TextView
+            <Button
                 android:id="@+id/INSTAGRAMecoco"
-                android:text="@string/INSTAGRAMecoco"
-                style="@style/TextMenu"/>
-
+                style="@style/TextMenu"
+                android:text="@string/INSTAGRAMecoco" />
         </LinearLayout>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
