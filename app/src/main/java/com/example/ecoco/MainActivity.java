@@ -1,17 +1,18 @@
 package com.example.ecoco;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
 import android.os.Bundle;
-import android.view.MenuItem;
+import android.view.LayoutInflater;
 import android.view.View;
-import android.widget.CheckBox;
+import android.widget.Button;
+import android.widget.LinearLayout;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.android.material.bottomsheet.BottomSheetDialog;
 
 public class MainActivity extends AppCompatActivity {
     private BottomNavigationView mBottomNV;
@@ -21,11 +22,9 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         mBottomNV = findViewById(R.id.nav_view);
-        //NavigationItemSelecte
+        //NavigationItemSelected
         mBottomNV.setOnNavigationItemSelectedListener(menuItem -> {
             BottomNavigate(menuItem.getItemId());
-
-
             return true;
         });
         mBottomNV.setSelectedItemId(R.id.navigation_1);
@@ -62,5 +61,5 @@ public class MainActivity extends AppCompatActivity {
         fragmentTransaction.commitNow();
     }
 
-
 }
+
