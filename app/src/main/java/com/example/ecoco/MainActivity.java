@@ -6,30 +6,29 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
 import android.os.Bundle;
-import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
-import android.widget.LinearLayout;
+import android.widget.CheckBox;
+import android.widget.TextView;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
-import com.google.android.material.bottomsheet.BottomSheetDialog;
 
 public class MainActivity extends AppCompatActivity {
-    private BottomNavigationView mBottomNV;
+
+
+
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        mBottomNV = findViewById(R.id.nav_view);
+        BottomNavigationView mBottomNV = findViewById(R.id.nav_view);
         //NavigationItemSelected
         mBottomNV.setOnNavigationItemSelectedListener(menuItem -> {
             BottomNavigate(menuItem.getItemId());
             return true;
         });
         mBottomNV.setSelectedItemId(R.id.navigation_1);
-
-
 
     }
     private void BottomNavigate(int id) {  //BottomNavigation 페이지 변경

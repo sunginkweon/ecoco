@@ -45,4 +45,8 @@
     <string name="testCB">test</string>
     <string name="CharacterExplanation">CharacterExplanation</string>
     <string name="save">저장</string>
+    <string name="not_use_code">미사용 코드 뽑기 (1pt)</string>
+    <string name="use_fan">에어컨 대신 선풍기 사용 (2pt)</string>
+    <string name="total">Total :</string>
+    <string name="_00">00</string>
 </resources>
