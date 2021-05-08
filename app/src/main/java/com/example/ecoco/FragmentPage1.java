@@ -1,5 +1,8 @@
 package com.example.ecoco;
 
+import android.app.Activity;
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -13,11 +16,15 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
+import static android.content.Context.MODE_PRIVATE;
+
 public class FragmentPage1 extends Fragment {
-    @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-    }
+
+    SharedPreferences pref;
+    SharedPreferences.Editor editor;
+
+    int today_total;
+
     private CheckBox cb1;
     private CheckBox cb2;
     private CheckBox cb3;
@@ -29,8 +36,16 @@ public class FragmentPage1 extends Fragment {
     private CheckBox cb9;
     private CheckBox cb10;
     private CheckBox cb11;
-    private TextView t_point;
+    private TextView Total;
     private Button b;
+
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+
+    }
+
+
 
     @Nullable
     @Override
@@ -49,14 +64,14 @@ public class FragmentPage1 extends Fragment {
         cb10 = (CheckBox) rootView.findViewById(R.id.CB_code);
         cb11 = (CheckBox) rootView.findViewById(R.id.CB_fan);
         b = rootView.findViewById(R.id.BT_save);
-        t_point = rootView.findViewById(R.id.today_point);
+        Total = (TextView) rootView.findViewById(R.id.Total);
 
         b.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View rootView) {
                 int num_result = 0; // 값 초기화
                 StringBuilder result=new StringBuilder();
-                result.append("오늘 얻은 점수 :");
+                result.append("축하해요 🎉");
                 if (cb1.isChecked()) num_result += 0x3;
                 if (cb2.isChecked()) num_result += 0x3;
                 if (cb3.isChecked()) num_result += 0x10;
@@ -68,8 +83,12 @@ public class FragmentPage1 extends Fragment {
                 if (cb9.isChecked()) num_result += 0x1;
                 if (cb10.isChecked()) num_result += 0x1;
                 if (cb11.isChecked()) num_result += 0x2;
-                result.append("\nTotal: "+num_result+"pt");
-                Toast.makeText(getActivity(), result.toString(), Toast.LENGTH_LONG).show();
+                result.append("\n오늘 총 " + num_result + "점을 획득했어요!");
+                Toast.makeText(getActivity(), result.toString(), Toast.LENGTH_SHORT).show();
+                Total.setText("오늘의 점수 : " + num_result + "점");
+
+                ;
+
             }
         }); // end setOnClickListener
         return rootView;
