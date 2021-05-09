@@ -7,6 +7,7 @@ import androidx.fragment.app.FragmentTransaction;
 
 import android.app.Activity;
 import android.content.SharedPreferences;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -17,6 +18,7 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class MainActivity extends AppCompatActivity {
 
+    SQLiteDatabase sqlitedb = null;
 
 
     @Override
@@ -32,6 +34,18 @@ public class MainActivity extends AppCompatActivity {
         });
         mBottomNV.setSelectedItemId(R.id.navigation_1);
         };
+    public SQLiteDatabase openDatabase (String name)
+    {
+        SQLiteDatabase sqlitedb = openOrCreateDatabase(name, MODE_PRIVATE, null);
+        return sqlitedb;
+    }
+    public void funDBopen (View v)
+    {
+        sqlitedb = openDatabase("sqlitedb");
+        String sql = "create table IF NOT EXISTS daily (date date, list text, point integer)";
+        sqlitedb.execSQL(sql);
+    }
+
 
     private void BottomNavigate(int id) {  //BottomNavigation 페이지 변경
         String tag = String.valueOf(id);

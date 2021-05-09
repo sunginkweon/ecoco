@@ -30,8 +30,9 @@
 
 
         <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:id="@+id/linearLayout3"
+            android:layout_width="353dp"
+            android:layout_height="378dp"
             android:orientation="vertical"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -53,48 +54,26 @@
             <TextView
                 android:id="@+id/Date"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="60dp"
+                android:layout_height="50dp"
+                android:layout_marginBottom="204dp"
                 android:fontFamily="@font/nanumbarungothic"
-                android:text="2000/00/00"
+                android:text="@string/sel_date"
                 android:textColor="@color/main1"
-                android:textSize="20sp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.117"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/calendarView" />
+                android:textSize="20sp" />
 
-            <TextView
-                android:id="@+id/DateDetail1"
-                android:layout_width="wrap_content"
-                android:layout_height="14dp"
-                android:layout_marginTop="28dp"
-                android:fontFamily="@font/nanumbarungothic"
-                android:text="Detail1"
-                android:textColor="@color/black"
-                android:textSize="18sp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.099"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/Date"
-                app:layout_constraintVertical_bias="0.0" />
 
-            <TextView
-                android:id="@+id/DateDetail2"
-                android:layout_width="wrap_content"
-                android:layout_height="14dp"
-                android:fontFamily="@font/nanumbarungothic"
-                android:text="Detail2"
-                android:textColor="@color/black"
-                android:textSize="18sp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.099"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/DateDetail1"
-                app:layout_constraintVertical_bias="0.092" />
         </LinearLayout>
+
+        <TextView
+            android:id="@+id/dailylist"
+            android:layout_width="349dp"
+            android:layout_height="138dp"
+            android:text="@string/list"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout3"
+            app:layout_constraintVertical_bias="0.16" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

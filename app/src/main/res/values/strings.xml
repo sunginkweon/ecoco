@@ -49,4 +49,6 @@
     <string name="use_fan">에어컨 대신 선풍기 사용 (2pt)</string>
     <string name="total">오늘도 함께 지구를 지켜봐요!</string>
     <string name="_00">00</string>
+    <string name="sel_date">날짜를 선택해주세요</string>
+    <string name="list">내역</string>
 </resources>
