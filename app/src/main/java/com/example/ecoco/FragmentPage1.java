@@ -1,9 +1,11 @@
 package com.example.ecoco;
 
+import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -16,9 +18,16 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+
 import static android.content.Context.MODE_PRIVATE;
 
 public class FragmentPage1 extends Fragment {
+    @SuppressLint("SimpleDateFormat")
+    SimpleDateFormat format1 = new SimpleDateFormat( "yyyy-MM-dd");
+    Calendar time = Calendar.getInstance();
+    String format_time1 = format1.format(time.getTime());
 
     SharedPreferences pref;
     SharedPreferences.Editor editor;
@@ -52,23 +61,25 @@ public class FragmentPage1 extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         setHasOptionsMenu(true);
         View rootView = inflater.inflate(R.layout.fragment_page_1, container, false);
-        cb1 = (CheckBox) rootView.findViewById(R.id.CB_Boiler);
-        cb2 = (CheckBox) rootView.findViewById(R.id.CB_Container);
-        cb3 = (CheckBox) rootView.findViewById(R.id.CB_Meat50);
-        cb4 = (CheckBox) rootView.findViewById(R.id.CB_NoDisposable);
-        cb5 = (CheckBox) rootView.findViewById(R.id.CB_NoMeat);
-        cb6 = (CheckBox) rootView.findViewById(R.id.CB_PublicTransport);
-        cb7 = (CheckBox) rootView.findViewById(R.id.CB_Plant);
-        cb8 = (CheckBox) rootView.findViewById(R.id.CB_SeperateCollection);
-        cb9 = (CheckBox) rootView.findViewById(R.id.CB_Shower5);
-        cb10 = (CheckBox) rootView.findViewById(R.id.CB_code);
-        cb11 = (CheckBox) rootView.findViewById(R.id.CB_fan);
+        cb1 = rootView.findViewById(R.id.CB_Boiler);
+        cb2 = rootView.findViewById(R.id.CB_Container);
+        cb3 = rootView.findViewById(R.id.CB_Meat50);
+        cb4 = rootView.findViewById(R.id.CB_NoDisposable);
+        cb5 = rootView.findViewById(R.id.CB_NoMeat);
+        cb6 = rootView.findViewById(R.id.CB_PublicTransport);
+        cb7 = rootView.findViewById(R.id.CB_Plant);
+        cb8 = rootView.findViewById(R.id.CB_SeperateCollection);
+        cb9 = rootView.findViewById(R.id.CB_Shower5);
+        cb10 = rootView.findViewById(R.id.CB_code);
+        cb11 = rootView.findViewById(R.id.CB_fan);
         b = rootView.findViewById(R.id.BT_save);
-        Total = (TextView) rootView.findViewById(R.id.Total);
+        Total = rootView.findViewById(R.id.Total);
 
         b.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                ((MainActivity) getActivity()).openDatabase("database");
+                ((MainActivity) getActivity()).createTable();
                 int num_result = 0; // 값 초기화
                 StringBuilder result=new StringBuilder();
                 result.append("축하해요 🎉");
@@ -130,7 +141,7 @@ public class FragmentPage1 extends Fragment {
                 result.append("\n오늘 총 " + num_result + "점을 획득했어요!");
                 Toast.makeText(getActivity(), result.toString(), Toast.LENGTH_SHORT).show();
                 Total.setText("오늘의 점수 : " + num_result + "점");
-
+                ((MainActivity) getActivity()).insertData(format_time1, num_result, result);
 
             }
         }); // end setOnClickListener
