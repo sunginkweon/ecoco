@@ -5,22 +5,14 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
-import android.annotation.SuppressLint;
-import android.app.Activity;
-import android.content.SharedPreferences;
+import android.content.Intent;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
-import android.widget.Button;
-import android.widget.CheckBox;
-import android.widget.TextView;
-import android.widget.Toast;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
-
-import java.text.SimpleDateFormat;
-import java.util.Calendar;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -39,12 +31,13 @@ public class MainActivity extends AppCompatActivity {
             return true;
         });
         mBottomNV.setSelectedItemId(R.id.navigation_1);
-        };
+    }
 
-    public void openDatabase(String databaseName){
+    public SQLiteDatabase openDatabase(String databaseName){
         Log.i("dbex", "openDatabase() called");
         database = openOrCreateDatabase(databaseName, MODE_PRIVATE, null);
         if(database != null) Log.i("dbex","database opened");
+        return database;
     }
 
     public void createTable(){
@@ -57,6 +50,13 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    public void funcDataView(View v)
+    {
+        Intent it = new Intent(MainActivity.this, UserData.class);
+        startActivity(it);
+
+    }
+
     public void insertData(String date, int point, StringBuilder list){
 
         if(database != null){
@@ -65,6 +65,16 @@ public class MainActivity extends AppCompatActivity {
             database.execSQL(sql, params);
         } else {
             Log.i("dbex","error");
+        }
+    }
+    public String selectData(){
+        if(database != null){ String sql = "SELECT list FROM daily WHERE date = '2021-5-13';";
+            Cursor cursor = database.rawQuery(sql, null);
+            String list = cursor.getString(0);
+            cursor.close();
+            return list;
+        } else {
+            return  "";
         }
     }
     private void BottomNavigate(int id) {  //BottomNavigation 페이지 변경
@@ -99,7 +109,5 @@ public class MainActivity extends AppCompatActivity {
         fragmentTransaction.commitNow();
     }
 
-    public void openDatabase(View view) {
-    }
 }
 

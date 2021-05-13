@@ -20,12 +20,13 @@ import androidx.fragment.app.Fragment;
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
+import java.util.Objects;
 
 import static android.content.Context.MODE_PRIVATE;
 
 public class FragmentPage1 extends Fragment {
     @SuppressLint("SimpleDateFormat")
-    SimpleDateFormat format1 = new SimpleDateFormat( "yyyy-MM-dd");
+    SimpleDateFormat format1 = new SimpleDateFormat( "yyyy-M-d");
     Calendar time = Calendar.getInstance();
     String format_time1 = format1.format(time.getTime());
 
@@ -78,7 +79,7 @@ public class FragmentPage1 extends Fragment {
         b.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ((MainActivity) getActivity()).openDatabase("database");
+                ((MainActivity) Objects.requireNonNull(getActivity())).openDatabase("database");
                 ((MainActivity) getActivity()).createTable();
                 int num_result = 0; // 값 초기화
                 StringBuilder result=new StringBuilder();
