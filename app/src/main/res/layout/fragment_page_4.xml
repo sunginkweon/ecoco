@@ -36,16 +36,6 @@
             app:layout_constraintVertical_bias="0.2">
 
             <Button
-                android:id="@+id/ChangeProfile"
-                style="@style/TextMenu"
-                android:text="@string/ChangeProfile" />
-
-            <Button
-                android:id="@+id/Logout"
-                style="@style/TextMenu"
-                android:text="@string/Logout" />
-
-            <Button
                 android:id="@+id/SendFeedback"
                 style="@style/TextMenu"
                 android:text="@string/SendFeedback" />

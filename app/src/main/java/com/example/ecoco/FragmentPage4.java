@@ -1,5 +1,9 @@
 package com.example.ecoco;
 
+import android.app.Activity;
+import android.content.Context;
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -12,13 +16,74 @@ import androidx.fragment.app.Fragment;
 
 public class FragmentPage4 extends Fragment {
 
+    private Button SendFeedback;
+    private Button AppRate;
+    private Button INSTAGRAMecoco;
+    private Button More;
+    private Button Developers;
+
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         setHasOptionsMenu(true);
-        return inflater.inflate(R.layout.fragment_page_4, container, false);
+        View rootView = inflater.inflate(R.layout.fragment_page_4, container, false);
+
+        SendFeedback = rootView.findViewById(R.id.SendFeedback);
+        AppRate = rootView.findViewById(R.id.AppRate);
+        INSTAGRAMecoco = rootView.findViewById(R.id.INSTAGRAMecoco);
+        More = rootView.findViewById(R.id.More);
+        Developers = rootView.findViewById(R.id.Developers);
+
+
+        SendFeedback.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://play.google.com"));
+                startActivity(myIntent);
+            }
+        });
+
+        AppRate.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://play.google.com"));
+                startActivity(myIntent);
+            }
+        });
+
+        More.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.youtube.com/watch?v=gUhxcdzRgLQ"));
+                startActivity(myIntent);
+            }
+        });
+
+        Developers.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent myIntent = new Intent(getActivity(), FragmentPage1.class);
+                /* 테스트로 첫번째 페이지 걸어놨음. 실행시 튕겨서 손봐야됨*/
+                startActivity(myIntent);
+            }
+        });
+
+        INSTAGRAMecoco.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.instagram.com/invites/contact/?i=1kjss09k255p4&utm_content=ltbyshq"));
+                startActivity(myIntent);
+            }
+        });
+        /* id : app_ecoco, pw : ecoco0000*/
+
+
+
+        return rootView;
     }
+
+
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
