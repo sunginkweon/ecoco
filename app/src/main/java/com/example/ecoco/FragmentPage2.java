@@ -24,6 +24,10 @@ import java.util.Objects;
 public class FragmentPage2 extends Fragment {
     public CalendarView calendarView;
     public TextView Change_date, daily_data;
+    public Double point;
+    public String d1;
+    public int sy,sm,sd;
+
 
     @Nullable
     @Override
@@ -31,10 +35,10 @@ public class FragmentPage2 extends Fragment {
         setHasOptionsMenu(true);
         View rootView = inflater.inflate(R.layout.fragment_page_2, container, false);
 
+
         calendarView = rootView.findViewById(R.id.calendarView);
         Change_date = rootView.findViewById(R.id.Date);
         daily_data = rootView.findViewById(R.id.dailylist);
-
 
 
 
@@ -42,6 +46,9 @@ public class FragmentPage2 extends Fragment {
             @Override
             public void onSelectedDayChange(@NonNull CalendarView view, int year, int month, int dayOfMonth) {
                 Change_date.setText(String.format("%d-%d-%d",year,month+1,dayOfMonth));
+                sy = year;
+                sm = month;
+                sd = dayOfMonth;
             }
 
         });

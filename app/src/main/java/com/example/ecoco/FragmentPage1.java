@@ -30,9 +30,6 @@ public class FragmentPage1 extends Fragment {
     Calendar time = Calendar.getInstance();
     String format_time1 = format1.format(time.getTime());
 
-    SharedPreferences pref;
-    SharedPreferences.Editor editor;
-
     int today_total;
 
     private CheckBox cb1;

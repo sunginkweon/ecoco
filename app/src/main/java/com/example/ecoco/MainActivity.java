@@ -11,12 +11,14 @@ import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.TextView;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class MainActivity extends AppCompatActivity {
 
     SQLiteDatabase database = null;
+    public TextView Change_date;
 
 
     @Override
@@ -50,6 +52,27 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    public String selectData1(int year, int month, int day){
+        Change_date.setText(String.format("%d-%d-%d",year,month+1,day));
+        if(database != null)
+        {
+            String sql = "SELECT * FROM daily= '" + Change_date + "'";
+            Cursor cursor = database.rawQuery(sql, null);
+            String resultdata = null;
+            while(cursor.moveToNext()) {
+                int number = cursor.getInt(0);
+                String date = cursor.getString(1);
+                int point = cursor.getInt(2);
+                String list = cursor.getString(3);
+                resultdata = list;
+            }
+            cursor.close();
+            return resultdata;
+        } else {
+            return  "해당 날짜에는 기록이 없습니다.";
+        }
+    }
+
     public void funcDataView(View v)
     {
         Intent it = new Intent(MainActivity.this, UserData.class);
@@ -67,8 +90,24 @@ public class MainActivity extends AppCompatActivity {
             Log.i("dbex","error");
         }
     }
-    public String selectData(){
-        if(database != null){ String sql = "SELECT list FROM daily WHERE date = '2021-5-13';";
+
+    public double sumPoints(){
+        if(database != null)
+        {
+            String sql = "SELECT SUM(point) FROM daily";
+            Cursor cursor = database.rawQuery(sql, null);
+            cursor.moveToFirst();
+            double i=cursor.getDouble(2);
+
+            return i;
+        } else {
+            return  0;
+        }
+    }
+
+    public String selectData(int year, int month, int dayOfMonth){
+        Change_date.setText(String.format("%d-%d-%d",year,month+1,dayOfMonth));
+        if(database != null){ String sql = "SELECT list FROM daily WHERE date =" + Change_date;
             Cursor cursor = database.rawQuery(sql, null);
             String list = cursor.getString(0);
             cursor.close();

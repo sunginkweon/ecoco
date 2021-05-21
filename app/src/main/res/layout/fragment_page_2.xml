@@ -92,11 +92,12 @@
             android:id="@+id/button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="29dp"
-            android:text="Button"
+            android:layout_marginBottom="20dp"
             android:onClick="funcDataView"
+            android:text="@string/detail"
             app:layout_constraintBottom_toTopOf="@+id/linearLayout3"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.792"
             app:layout_constraintStart_toEndOf="@+id/textView5" />
 
 
