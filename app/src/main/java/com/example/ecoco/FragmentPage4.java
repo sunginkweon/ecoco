@@ -13,6 +13,7 @@ import android.widget.Button;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
 
 public class FragmentPage4 extends Fragment {
 
@@ -22,13 +23,11 @@ public class FragmentPage4 extends Fragment {
     private Button More;
     private Button Developers;
 
-
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         setHasOptionsMenu(true);
         View rootView = inflater.inflate(R.layout.fragment_page_4, container, false);
-
         SendFeedback = rootView.findViewById(R.id.SendFeedback);
         AppRate = rootView.findViewById(R.id.AppRate);
         INSTAGRAMecoco = rootView.findViewById(R.id.INSTAGRAMecoco);
@@ -63,8 +62,7 @@ public class FragmentPage4 extends Fragment {
         Developers.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent myIntent = new Intent(getActivity(), FragmentPage1.class);
-                /* 테스트로 첫번째 페이지 걸어놨음. 실행시 튕겨서 손봐야됨*/
+                Intent myIntent = new Intent(getActivity(), developers.class);
                 startActivity(myIntent);
             }
         });
