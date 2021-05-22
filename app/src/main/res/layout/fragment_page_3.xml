@@ -72,7 +72,7 @@
                 </RelativeLayout>
 
                 <LinearLayout
-                    android:layout_width="wrap_content"
+                    android:layout_width="167dp"
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
 
@@ -90,7 +90,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/nanumbarungothic"
-                            android:text="Name"
+                            android:text="@string/Ochotonidae"
                             android:textColor="@color/main1"
                             android:textSize="20sp"
                             tools:ignore="MissingConstraints" />
@@ -109,14 +109,16 @@
 
                     <TextView
                         android:id="@+id/editTextTextMultiLine2"
-                        android:layout_width="167dp"
+                        android:layout_width="150dp"
                         android:layout_height="109dp"
                         android:autofillHints=""
                         android:ems="10"
                         android:fontFamily="@font/nanumbarungothic"
                         android:gravity="start|top"
                         android:hint="@string/app_name"
-                        android:text="@string/CharacterExplanation"
+                        android:text="@string/OchotonidaeDetail"
+                        android:maxLines="3"
+                        android:ellipsize="end"
                         android:textColor="@color/black"
                         android:textSize="16sp"
                         tools:ignore="MissingConstraints" />
