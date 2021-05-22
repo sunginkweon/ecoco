@@ -10,7 +10,8 @@
         android:roundIcon="@mipmap/ic_main_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Ecoco">
-        <activity android:name=".developers"></activity>
+        <activity android:name=".CharacterDetail"></activity>
+        <activity android:name=".developers" />
         <activity android:name=".UserData" />
         <activity
             android:name=".MainActivity"
@@ -22,7 +23,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
     </application>
 
 </manifest>

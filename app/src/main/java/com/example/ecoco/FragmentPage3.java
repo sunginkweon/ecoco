@@ -14,12 +14,23 @@ import androidx.fragment.app.Fragment;
 
 public class FragmentPage3 extends Fragment{
 
+    private Button ButtonForDetail;
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         setHasOptionsMenu(true);
-        return inflater.inflate(R.layout.fragment_page_3, container, false);
+        View rootView = inflater.inflate(R.layout.fragment_page_3, container, false);
+        ButtonForDetail = rootView.findViewById(R.id.ButtonForDetail);
+
+        ButtonForDetail.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent myIntent = new Intent(getActivity(), CharacterDetail.class);
+                startActivity(myIntent);
+            }
+        });
+        return rootView;
     }
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
