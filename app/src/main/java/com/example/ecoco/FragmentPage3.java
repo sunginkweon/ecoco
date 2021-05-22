@@ -6,6 +6,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -23,6 +24,7 @@ public class FragmentPage3 extends Fragment{
         View rootView = inflater.inflate(R.layout.fragment_page_3, container, false);
         ButtonForDetail = rootView.findViewById(R.id.ButtonForDetail);
 
+
         ButtonForDetail.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -30,6 +32,8 @@ public class FragmentPage3 extends Fragment{
                 startActivity(myIntent);
             }
         });
+
+
         return rootView;
     }
     @Override
