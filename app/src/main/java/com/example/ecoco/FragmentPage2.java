@@ -1,32 +1,26 @@
 package com.example.ecoco;
 
-import android.content.Intent;
 import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.CalendarView;
-import android.widget.EditText;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
-import java.io.FileInputStream;
-import java.io.IOException;
-import java.text.SimpleDateFormat;
-import java.util.Objects;
-
 public class FragmentPage2 extends Fragment {
     public CalendarView calendarView;
-    public TextView Change_date, daily_data;
-    public Double point;
-    public String d1;
+    SQLiteDatabase database = null;
+    public TextView Change_date;
     public int sy,sm,sd;
+    private Button b;
+    TextView point;
 
 
     @Nullable
@@ -35,11 +29,25 @@ public class FragmentPage2 extends Fragment {
         setHasOptionsMenu(true);
         View rootView = inflater.inflate(R.layout.fragment_page_2, container, false);
 
-
         calendarView = rootView.findViewById(R.id.calendarView);
         Change_date = rootView.findViewById(R.id.Date);
-        daily_data = rootView.findViewById(R.id.dailylist);
+        b = rootView.findViewById(R.id.clicktotal);
+        point = rootView.findViewById(R.id.point);
 
+
+        b.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ((MainActivity) getActivity()).openDatabase("database");
+                ((MainActivity) getActivity()).createTable();
+                int result = 0;
+                String sql = "SELECT point FROM daily";
+                Cursor cursor = database.rawQuery(sql, null);
+                cursor.moveToFirst();
+                result = cursor.getInt(1);
+                point.setText("현재까지 획득한 총 포인트는" + result + "점 입니다.");
+            }
+        });
 
 
         calendarView.setOnDateChangeListener(new CalendarView.OnDateChangeListener() {

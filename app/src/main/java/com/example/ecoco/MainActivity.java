@@ -44,7 +44,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void createTable(){
         if(database != null){
-            String sql = "CREATE TABLE IF NOT EXISTS daily (number integer PRIMARY KEY AUTOINCREMENT, date TEXT, point INT, list TEXT)";
+            String sql = "CREATE TABLE IF NOT EXISTS daily (date TEXT, point INT, list TEXT)";
             database.execSQL(sql);
             Log.i("dbex","Table opened");
         } else {
@@ -60,10 +60,9 @@ public class MainActivity extends AppCompatActivity {
             Cursor cursor = database.rawQuery(sql, null);
             String resultdata = null;
             while(cursor.moveToNext()) {
-                int number = cursor.getInt(0);
-                String date = cursor.getString(1);
-                int point = cursor.getInt(2);
-                String list = cursor.getString(3);
+                String date = cursor.getString(0);
+                int point = cursor.getInt(1);
+                String list = cursor.getString(2);
                 resultdata = list;
             }
             cursor.close();
@@ -91,15 +90,15 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    public double sumPoints(){
+    public int sumPoints(){
         if(database != null)
         {
-            String sql = "SELECT SUM(point) FROM daily";
+            int result = 0;
+            String sql = "SELECT (SUM(point)) FROM daily";
             Cursor cursor = database.rawQuery(sql, null);
             cursor.moveToFirst();
-            double i=cursor.getDouble(2);
-
-            return i;
+            result = cursor.getInt(1);
+            return result;
         } else {
             return  0;
         }

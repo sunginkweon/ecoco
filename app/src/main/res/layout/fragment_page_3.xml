@@ -46,11 +46,11 @@
                     tools:ignore="MissingConstraints">
 
                     <ImageView
+                        android:id="@+id/main_character"
                         android:layout_width="100dp"
                         android:layout_height="100dp"
                         android:layout_centerInParent="true"
                         android:adjustViewBounds="true"
-                        android:src="@drawable/ochotonidae"
                         tools:ignore="ContentDescription" />
 
                     <ProgressBar
@@ -86,18 +86,19 @@
                         android:orientation="horizontal">
 
                         <TextView
-                            android:id="@+id/textView3"
+                            android:id="@+id/main_name"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/nanumbarungothic"
-                            android:text="@string/Ochotonidae"
+                            android:hint="@string/character_name"
+                            android:text=""
                             android:textColor="@color/main1"
                             android:textSize="20sp"
                             tools:ignore="MissingConstraints" />
 
                         <Button
                             android:id="@+id/ButtonForDetail"
-                            android:layout_width="wrap_content"
+                            android:layout_width="67dp"
                             android:layout_height="wrap_content"
                             android:background="#00FFFFFF"
                             android:gravity="left"
@@ -108,7 +109,7 @@
                     </LinearLayout>
 
                     <TextView
-                        android:id="@+id/editTextTextMultiLine2"
+                        android:id="@+id/main_detail"
                         android:layout_width="150dp"
                         android:layout_height="110dp"
                         android:autofillHints=""
@@ -116,8 +117,8 @@
                         android:ems="10"
                         style="@style/TextContents"
                         android:gravity="start|top"
-                        android:hint="@string/app_name"
-                        android:text="@string/OchotonidaeDetail"
+                        android:hint="@string/dd"
+                        android:text=""
                         android:maxLines="3"
                         android:ellipsize="end"
                         android:textColor="@color/black"
@@ -138,7 +139,15 @@
                     android:layout_height="match_parent">
 
                     <ImageView
-                        android:id="@+id/chipmunk"
+                        android:id="@+id/c1"
+                        android:layout_width="120dp"
+                        android:layout_height="120dp"
+                        android:scaleX="0.5"
+                        android:scaleY="0.5"
+                        android:src="@drawable/ochotonidae" />
+
+                    <ImageView
+                        android:id="@+id/c2"
                         android:layout_width="120dp"
                         android:layout_height="120dp"
                         android:scaleX="0.5"
@@ -146,18 +155,11 @@
                         android:src="@drawable/chipmunk"
                         app:tint="#A9A9A9" />
 
-                    <ImageView
-                        android:layout_width="120dp"
-                        android:layout_height="120dp"
-                        android:scaleX="0.5"
-                        android:scaleY="0.5"
-                        android:src="@drawable/coralreef"
-                        app:tint="#A9A9A9" />
 
                     <ImageView
+                        android:id="@+id/c3"
                         android:layout_width="120dp"
                         android:layout_height="120dp"
-                        android:contentDescription="TODO"
                         android:scaleX="0.5"
                         android:scaleY="0.5"
                         android:src="@drawable/marmotte"
@@ -169,6 +171,7 @@
                     android:layout_height="match_parent">
 
                     <ImageView
+                        android:id="@+id/c4"
                         android:layout_width="120dp"
                         android:layout_height="120dp"
                         android:scaleX="0.5"
@@ -177,6 +180,7 @@
                         app:tint="#A9A9A9" />
 
                     <ImageView
+                        android:id="@+id/c5"
                         android:layout_width="120dp"
                         android:layout_height="120dp"
                         android:scaleX="0.5"
@@ -185,6 +189,7 @@
                         app:tint="#A9A9A9" />
 
                     <ImageView
+                        android:id="@+id/c6"
                         android:layout_width="120dp"
                         android:layout_height="120dp"
                         android:scaleX="0.5"
@@ -198,6 +203,7 @@
                     android:layout_height="match_parent">
 
                     <ImageView
+                        android:id="@+id/c7"
                         android:layout_width="120dp"
                         android:layout_height="120dp"
                         android:scaleX="0.5"
@@ -206,6 +212,7 @@
                         app:tint="#A9A9A9" />
 
                     <ImageView
+                        android:id="@+id/c8"
                         android:layout_width="120dp"
                         android:layout_height="120dp"
                         android:scaleX="0.5"
@@ -214,6 +221,7 @@
                         app:tint="#A9A9A9" />
 
                     <ImageView
+                        android:id="@+id/c9"
                         android:layout_width="120dp"
                         android:layout_height="120dp"
                         android:scaleX="0.5"

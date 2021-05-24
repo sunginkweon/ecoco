@@ -47,10 +47,9 @@ public class UserData extends AppCompatActivity {
             Cursor cursor = database.rawQuery(sql, null);
             String clickday = null;
             while(cursor.moveToNext()) {
-                int number = cursor.getInt(0);
-                String date = cursor.getString(1);
-                int point = cursor.getInt(2);
-                String list = cursor.getString(3);
+                String date = cursor.getString(0);
+                int point = cursor.getInt(1);
+                String list = cursor.getString(2);
                 clickday = date;
             }
             cursor.close();
@@ -66,10 +65,9 @@ public class UserData extends AppCompatActivity {
             Cursor cursor = database.rawQuery(sql, null);
             String resultdata = null;
             while(cursor.moveToNext()) {
-                int number = cursor.getInt(0);
-                String date = cursor.getString(1);
-                int point = cursor.getInt(2);
-                String list = cursor.getString(3);
+                String date = cursor.getString(0);
+                int point = cursor.getInt(1);
+                String list = cursor.getString(2);
                 resultdata = list;
              }
             cursor.close();

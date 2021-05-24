@@ -4,5 +4,5 @@
     <item name="textView5" type="id"/>
     <item name="calendarView" type="id"/>
     <item name="Date" type="id"/>
-    <item name="dailylist" type="id"/>
+    <item name="totalpoints" type="id"/>
 </resources>

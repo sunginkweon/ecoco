@@ -12,15 +12,17 @@
     tools:context=".MainActivity">
 
 
-
     <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        app:layout_anchor="@+id/constraintLayout"
+        app:layout_anchorGravity="center">
 
         <TextView
             android:id="@+id/textView5"
-            android:text="@string/cal"
             style="@style/TextTitle"
+            android:text="@string/cal"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintHorizontal_bias="0.1"
             app:layout_constraintLeft_toLeftOf="parent"
@@ -65,28 +67,17 @@
         </LinearLayout>
 
         <TextView
-            android:id="@+id/dailylist"
-            android:layout_width="344dp"
-            android:layout_height="93dp"
-            android:text="@string/list"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/linearLayout3"
-            app:layout_constraintVertical_bias="0.16" />
-
-        <TextView
             android:id="@+id/point"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="7dp"
+            android:layout_width="95dp"
+            android:layout_height="65dp"
+            android:layout_marginBottom="112dp"
             android:text="@string/score"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.917"
+            app:layout_constraintHorizontal_bias="0.636"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/dailylist"
-            app:layout_constraintVertical_bias="0.0" />
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout3"
+            app:layout_constraintVertical_bias="1.0" />
 
         <Button
             android:id="@+id/button"
@@ -99,6 +90,17 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.792"
             app:layout_constraintStart_toEndOf="@+id/textView5" />
+
+        <Button
+            android:id="@+id/clicktotal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="48dp"
+            android:text="Button"
+            app:layout_constraintEnd_toStartOf="@+id/point"
+            app:layout_constraintHorizontal_bias="0.48"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout3" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

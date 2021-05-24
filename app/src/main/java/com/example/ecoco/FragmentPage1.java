@@ -76,7 +76,7 @@ public class FragmentPage1 extends Fragment {
         b.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ((MainActivity) Objects.requireNonNull(getActivity())).openDatabase("database");
+                ((MainActivity) getActivity()).openDatabase("database");
                 ((MainActivity) getActivity()).createTable();
                 int num_result = 0; // 값 초기화
                 StringBuilder result=new StringBuilder();
