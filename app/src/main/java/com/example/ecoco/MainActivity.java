@@ -15,10 +15,12 @@ import android.widget.TextView;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
+import java.sql.Date;
+
 public class MainActivity extends AppCompatActivity {
 
-    SQLiteDatabase database = null;
-    public TextView Change_date;
+    SQLiteDatabase database;
+
 
 
     @Override
@@ -44,7 +46,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void createTable(){
         if(database != null){
-            String sql = "CREATE TABLE IF NOT EXISTS daily (date TEXT, point INT, list TEXT)";
+            String sql = "CREATE TABLE IF NOT EXISTS daily (datano integer PRIMARY KEY autoincrement, date text, point int, list text)";
             database.execSQL(sql);
             Log.i("dbex","Table opened");
         } else {
@@ -52,13 +54,51 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    public String selectData1(int year, int month, int day){
-        Change_date.setText(String.format("%d-%d-%d",year,month+1,day));
+    public int selectDatapoint(int year, int month, int day){
+        String seldate = null;
+        seldate = String.format("%d-%d-%d",year,month+1,day);
         if(database != null)
         {
-            String sql = "SELECT * FROM daily= '" + Change_date + "'";
+            String sql = "SELECT * FROM daily WHERE date='"+ seldate +"'";
             Cursor cursor = database.rawQuery(sql, null);
-            String resultdata = null;
+            int resultdata = 0;
+            while(cursor.moveToNext()) {
+                String date = cursor.getString(0);
+                int point = cursor.getInt(1);
+                String list = cursor.getString(2);
+                resultdata = point;
+            }
+            cursor.close();
+            return resultdata;
+        } else {
+            return  0;
+        }
+    }
+    public int sumPoints(){
+        if(database != null)
+        {
+            String sql = "SELECT SUM(point) FROM daily";
+            Cursor cursor = database.rawQuery(sql, null);
+            int result = 0;
+            while(cursor.moveToNext()) {
+                int point = cursor.getInt(0);
+                result = point;
+            }
+            cursor.close();
+            return result;
+        } else {
+            return  0;
+        }
+    }
+
+    public String selectDatalist(int year, int month, int day){
+        String seldate = null;
+        seldate = String.format("%d-%d-%d",year,month+1,day);
+        if(database != null)
+        {
+            String sql = "SELECT * FROM daily WHERE date='"+ seldate +"'";
+            Cursor cursor = database.rawQuery(sql, null);
+            String resultdata = "이 날은 기록이 없습니다";
             while(cursor.moveToNext()) {
                 String date = cursor.getString(0);
                 int point = cursor.getInt(1);
@@ -68,16 +108,11 @@ public class MainActivity extends AppCompatActivity {
             cursor.close();
             return resultdata;
         } else {
-            return  "해당 날짜에는 기록이 없습니다.";
+            return  "이 날은 기록이 없습니다";
         }
     }
 
-    public void funcDataView(View v)
-    {
-        Intent it = new Intent(MainActivity.this, UserData.class);
-        startActivity(it);
 
-    }
 
     public void insertData(String date, int point, StringBuilder list){
 
@@ -90,31 +125,9 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    public int sumPoints(){
-        if(database != null)
-        {
-            int result = 0;
-            String sql = "SELECT (SUM(point)) FROM daily";
-            Cursor cursor = database.rawQuery(sql, null);
-            cursor.moveToFirst();
-            result = cursor.getInt(1);
-            return result;
-        } else {
-            return  0;
-        }
-    }
 
-    public String selectData(int year, int month, int dayOfMonth){
-        Change_date.setText(String.format("%d-%d-%d",year,month+1,dayOfMonth));
-        if(database != null){ String sql = "SELECT list FROM daily WHERE date =" + Change_date;
-            Cursor cursor = database.rawQuery(sql, null);
-            String list = cursor.getString(0);
-            cursor.close();
-            return list;
-        } else {
-            return  "";
-        }
-    }
+
+
     private void BottomNavigate(int id) {  //BottomNavigation 페이지 변경
         String tag = String.valueOf(id);
         FragmentManager fragmentManager = getSupportFragmentManager();

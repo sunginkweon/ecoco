@@ -16,11 +16,10 @@ import androidx.fragment.app.Fragment;
 
 public class FragmentPage2 extends Fragment {
     public CalendarView calendarView;
-    SQLiteDatabase database = null;
     public TextView Change_date;
     public int sy,sm,sd;
-    private Button b;
-    TextView point;
+    TextView dayp, t1;
+
 
 
     @Nullable
@@ -31,32 +30,25 @@ public class FragmentPage2 extends Fragment {
 
         calendarView = rootView.findViewById(R.id.calendarView);
         Change_date = rootView.findViewById(R.id.Date);
-        b = rootView.findViewById(R.id.clicktotal);
-        point = rootView.findViewById(R.id.point);
+        dayp = rootView.findViewById(R.id.daypoint);
+        t1 = rootView.findViewById(R.id.totalpt);
 
 
-        b.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                ((MainActivity) getActivity()).openDatabase("database");
-                ((MainActivity) getActivity()).createTable();
-                int result = 0;
-                String sql = "SELECT point FROM daily";
-                Cursor cursor = database.rawQuery(sql, null);
-                cursor.moveToFirst();
-                result = cursor.getInt(1);
-                point.setText("현재까지 획득한 총 포인트는" + result + "점 입니다.");
-            }
-        });
 
 
         calendarView.setOnDateChangeListener(new CalendarView.OnDateChangeListener() {
             @Override
             public void onSelectedDayChange(@NonNull CalendarView view, int year, int month, int dayOfMonth) {
+                ((MainActivity) getActivity()).openDatabase("database");
                 Change_date.setText(String.format("%d-%d-%d",year,month+1,dayOfMonth));
                 sy = year;
                 sm = month;
                 sd = dayOfMonth;
+                int pt = ((MainActivity) getActivity()).selectDatapoint(sy,sm,sd);
+                String list = ((MainActivity) getActivity()).selectDatalist(sy,sm,sd);
+                int total = ((MainActivity) getActivity()).sumPoints();
+                dayp.setText("선택한 날짜에 \n총" + pt + "포인트를 모았습니다 \n" + list);
+                t1.setText("현재까지 모은\n 포인트는 총" + total + "pt입니다");
             }
 
         });

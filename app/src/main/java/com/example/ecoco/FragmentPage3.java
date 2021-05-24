@@ -19,8 +19,6 @@ import androidx.fragment.app.Fragment;
 
 public class FragmentPage3 extends Fragment{
 
-    private Button ButtonForDetail;
-    private View c1, c2, c3, c4, c5, c6, c7, c8, c9;
     TextView name, detail;
     ImageView mainC;
 
@@ -29,17 +27,17 @@ public class FragmentPage3 extends Fragment{
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         setHasOptionsMenu(true);
         View rootView = inflater.inflate(R.layout.fragment_page_3, container, false);
-        ButtonForDetail = rootView.findViewById(R.id.ButtonForDetail);
+        Button buttonForDetail = rootView.findViewById(R.id.ButtonForDetail);
         mainC = (ImageView) rootView.findViewById(R.id.main_character);
-        c1 = rootView.findViewById(R.id.c1);
-        c2 = rootView.findViewById(R.id.c2);
-        c3 = rootView.findViewById(R.id.c3);
-        c4 = rootView.findViewById(R.id.c4);
-        c5 = rootView.findViewById(R.id.c5);
-        c6 = rootView.findViewById(R.id.c6);
-        c7 = rootView.findViewById(R.id.c7);
-        c8 = rootView.findViewById(R.id.c8);
-        c9 = rootView.findViewById(R.id.c9);
+        View c1 = rootView.findViewById(R.id.c1);
+        View c2 = rootView.findViewById(R.id.c2);
+        View c3 = rootView.findViewById(R.id.c3);
+        View c4 = rootView.findViewById(R.id.c4);
+        View c5 = rootView.findViewById(R.id.c5);
+        View c6 = rootView.findViewById(R.id.c6);
+        View c7 = rootView.findViewById(R.id.c7);
+        View c8 = rootView.findViewById(R.id.c8);
+        View c9 = rootView.findViewById(R.id.c9);
         name = rootView.findViewById(R.id.main_name);
         detail = rootView.findViewById(R.id.main_detail);
 
@@ -48,7 +46,7 @@ public class FragmentPage3 extends Fragment{
 
 
 
-        ButtonForDetail.setOnClickListener(new View.OnClickListener() {
+        buttonForDetail.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent myIntent = new Intent(getActivity(), CharacterDetail.class);
