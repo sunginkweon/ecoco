@@ -10,7 +10,17 @@
         android:roundIcon="@mipmap/ic_main_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Ecoco">
-        <activity android:name=".CharacterDetail"></activity>
+        <activity android:name=".CharacterDetail_ochotonidae"></activity>
+        <activity android:name=".CharacterDetail_chipmunk"></activity>
+        <activity android:name=".CharacterDetail_marmotte"></activity>
+        <activity android:name=".CharacterDetail_cheetah"></activity>
+        <activity android:name=".CharacterDetail_odobenus"></activity>
+        <activity android:name=".CharacterDetail_panda"></activity>
+        <activity android:name=".CharacterDetail_polarbear"></activity>
+        <activity android:name=".CharacterDetail_tiger"></activity>
+        <activity android:name=".CharacterDetail_turtle"></activity>
+
+
         <activity android:name=".developers" />
         <activity android:name=".UserData" />
         <activity

@@ -50,7 +50,7 @@
                     android:layout_height="120dp"
                     android:scaleX="0.5"
                     android:scaleY="0.5"
-                    android:src="@drawable/chipmunk"
+                    android:src="@drawable/chipmunk_image"
                     app:tint="#A9A9A9" />
 
                 <ImageView
