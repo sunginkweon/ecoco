@@ -47,7 +47,7 @@ public class FragmentPage2 extends Fragment {
                 int pt = ((MainActivity) getActivity()).selectDatapoint(sy,sm,sd);
                 String list = ((MainActivity) getActivity()).selectDatalist(sy,sm,sd);
                 int total = ((MainActivity) getActivity()).sumPoints();
-                dayp.setText("선택한 날짜에 \n총" + pt + "포인트를 모았습니다 \n" + list);
+                dayp.setText("선택한 날짜에 \n총 " + pt + "포인트를 모았습니다 \n" + list);
                 t1.setText("현재까지 모은\n 포인트는 총" + total + "pt입니다");
             }
 

@@ -63,9 +63,9 @@ public class MainActivity extends AppCompatActivity {
             Cursor cursor = database.rawQuery(sql, null);
             int resultdata = 0;
             while(cursor.moveToNext()) {
-                String date = cursor.getString(0);
-                int point = cursor.getInt(1);
-                String list = cursor.getString(2);
+                String date = cursor.getString(1);
+                int point = cursor.getInt(2);
+                String list = cursor.getString(3);
                 resultdata = point;
             }
             cursor.close();
@@ -100,9 +100,9 @@ public class MainActivity extends AppCompatActivity {
             Cursor cursor = database.rawQuery(sql, null);
             String resultdata = "이 날은 기록이 없습니다";
             while(cursor.moveToNext()) {
-                String date = cursor.getString(0);
-                int point = cursor.getInt(1);
-                String list = cursor.getString(2);
+                String date = cursor.getString(1);
+                int point = cursor.getInt(2);
+                String list = cursor.getString(3);
                 resultdata = list;
             }
             cursor.close();
