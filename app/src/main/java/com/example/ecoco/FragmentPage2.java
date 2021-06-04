@@ -40,21 +40,17 @@ public class FragmentPage2 extends Fragment {
 
 
 
-        calendarView.setOnDateChangeListener(new CalendarView.OnDateChangeListener() {
-            @Override
-            public void onSelectedDayChange(@NonNull CalendarView view, int year, int month, int dayOfMonth) {
-                ((MainActivity) getActivity()).openDatabase("database");
-                Change_date.setText(String.format("%d-%d-%d",year,month+1,dayOfMonth));
-                sy = year;
-                sm = month;
-                sd = dayOfMonth;
-                int pt = ((MainActivity) getActivity()).selectDatapoint(sy,sm,sd);
-                String list = ((MainActivity) getActivity()).selectDatalist(sy,sm,sd);
-                int total = ((MainActivity) getActivity()).sumPoints();
-                dayp.setText("선택한 날짜에 \n총 " + pt + "포인트를 모았습니다 \n" + list);
-                t1.setText("현재까지 모은\n 포인트는 총" + total + "pt입니다");
-            }
-
+        calendarView.setOnDateChangeListener((view, year, month, dayOfMonth) -> {
+            ((MainActivity) getActivity()).openDatabase("database");
+            Change_date.setText(String.format("%d-%d-%d",year,month+1,dayOfMonth));
+            sy = year;
+            sm = month;
+            sd = dayOfMonth;
+            int pt = ((MainActivity) getActivity()).selectDatapoint(sy,sm,sd);
+            String list = ((MainActivity) getActivity()).selectDatalist(sy,sm,sd);
+            int total = ((MainActivity) getActivity()).sumPoints();
+            dayp.setText("선택한 날짜에 \n총 " + pt + "포인트를 모았습니다 \n" + list);
+            t1.setText("현재까지 모은\n 포인트는 \n총 " + total + "pt입니다");
         });
         return rootView;
     }

@@ -26,18 +26,18 @@
                 android:id="@+id/textView4"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:textAlignment="center"
+                android:gravity="center_horizontal"
                 android:text="성균관대학교\n모바일앱개발 기초\n\n🌱Team ecoco🌱\n권성인\n이충일\n"
+                android:textAlignment="center"
                 android:textColor="@color/main1"
-                android:textSize="20sp"
-                android:gravity="center_horizontal" />
+                android:textSize="20sp" />
 
             <Button
                 android:id="@+id/Back"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="#00FFFFFF"
-                android:text="←"
+                android:text="@string/back_arrow"
                 android:textColor="@color/black"
                 app:backgroundTint="#FFFFFF"
                 app:iconTint="#00FFFFFF" />
