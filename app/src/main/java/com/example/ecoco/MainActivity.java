@@ -16,10 +16,15 @@ import android.widget.TextView;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import java.sql.Date;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
 
 public class MainActivity extends AppCompatActivity {
 
     SQLiteDatabase database;
+    SimpleDateFormat format1 = new SimpleDateFormat( "yyyy-M-d");
+    Calendar time = Calendar.getInstance();
+    String today = format1.format(time.getTime());
 
 
 
@@ -112,6 +117,14 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    public void deleteData(){
+        if(database != null){
+            String sql = "DELETE FROM daily WHERE date='" + today + "'";
+            database.execSQL(sql);
+        } else {
+            Log.i("dbex","error");
+        }
+    }
 
 
     public void insertData(String date, int point, StringBuilder list){

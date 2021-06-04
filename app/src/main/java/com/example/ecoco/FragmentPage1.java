@@ -78,69 +78,74 @@ public class FragmentPage1 extends Fragment {
             public void onClick(View v) {
                 ((MainActivity) getActivity()).openDatabase("database");
                 ((MainActivity) getActivity()).createTable();
+                ((MainActivity) getActivity()).deleteData();
                 int num_result = 0; // 값 초기화
                 StringBuilder result=new StringBuilder();
                 result.append("축하해요 🎉");
                 if (cb1.isChecked())
                 {
                     num_result += 0x3;
-                    result.append("\n보일러 끄기");
+                    result.append("\n\uD83C\uDF21보일러 끄기");
                 }
                 if (cb2.isChecked()) 
                 {
                     num_result += 0x3;
-                    result.append("\n다회 용기에 담기");
+                    result.append("\n\uD83D\uDED2식자제 구입시 다회 용기에 담기");
                 }
                 if (cb3.isChecked()) 
                 {
                     num_result += 10;
-                    result.append("\n육류 50g 이하");
+                    result.append("\n\uD83C\uDF56육류 50g 이하");
                 }
                 if (cb4.isChecked()) 
                 {
                     num_result += 0x2;
-                    result.append("\n1회용품 쓰지 않기");
+                    result.append("\n\uD83E\uDD641회용품 쓰지 않기");
                 }
                 if (cb5.isChecked()) 
                 {
                     num_result += 0x5;
-                    result.append("\n육류 안 먹기");
+                    result.append("\n\uD83E\uDD66육류 안 먹기");
                 }
                 if (cb6.isChecked()) 
                 {
                     num_result += 0x5;
-                    result.append("\n대중교통 or 걷기");
+                    result.append("\n\uD83D\uDE89대중교통 or 걷기");
                 }
                 if (cb7.isChecked()) 
                 {
                     num_result += 0x1;
-                    result.append("\n식물 키우기");
+                    result.append("\n\uD83C\uDF31식물 키우기");
                 }
                 if (cb8.isChecked()) 
                 {
                     num_result += 0x2;
-                    result.append("\n분리수거 확실히");
+                    result.append("\n♻분리수거 확실히");
                 }
                 if (cb9.isChecked()) 
                 {
                     num_result += 0x1;
-                    result.append("\n샤워 5분 이내");
+                    result.append("\n\uD83D\uDEBF샤워 5분 이내");
                 }
                 if (cb10.isChecked()) 
                 {
                     num_result += 0x1;
-                    result.append("\n코드 뽑기");
+                    result.append("\n\uD83D\uDD0C코드 뽑기");
                 }
                 if (cb11.isChecked()) 
                 {
                     num_result += 0x2;
-                    result.append("\n선풍기 사용");
+                    result.append("\n\uD83D\uDCA8선풍기 사용");
                 }
                 result.append("\n오늘 총 " + num_result + "점을 획득했어요!");
                 Toast.makeText(getActivity(), result.toString(), Toast.LENGTH_SHORT).show();
                 Total.setText("오늘의 점수 : " + num_result + "점");
+                int yesterday = ((MainActivity) getActivity()).sumPoints();
                 ((MainActivity) getActivity()).insertData(format_time1, num_result, result);
-
+                int today = ((MainActivity) getActivity()).sumPoints();
+                if (yesterday/100 != today/100) {
+                    Toast.makeText(getActivity(), "\uD83D\uDC36어플을 껐다 새로 열어주시면\uD83D\uDC2F \n\uD83C\uDF81새로운 동물 친구가 도착해 있을거예요!\uD83C\uDF81", Toast.LENGTH_LONG).show();
+                }
             }
         }); // end setOnClickListener
         return rootView;

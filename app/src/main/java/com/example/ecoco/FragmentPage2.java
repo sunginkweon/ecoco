@@ -14,11 +14,15 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+
 public class FragmentPage2 extends Fragment {
     public CalendarView calendarView;
     public TextView Change_date;
     public int sy,sm,sd;
     TextView dayp, t1;
+
 
 
 
