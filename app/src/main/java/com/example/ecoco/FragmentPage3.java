@@ -12,15 +12,18 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.annotation.RequiresApi;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
 
 public class FragmentPage3 extends Fragment{
 
-    TextView name, detail;
+
+    TextView name, detail, pointNow;
     ImageView mainC;
     ProgressBar pb =null;
 
@@ -45,8 +48,17 @@ public class FragmentPage3 extends Fragment{
         detail = rootView.findViewById(R.id.main_detail);
         ((MainActivity) getActivity()).openDatabase("database");
         int pt = ((MainActivity) getActivity()).sumPoints();
-        pb = rootView.findViewById(R.id.progressBar);
-        pb.setProgress(pt%100);
+        ProgressBar pb = rootView.findViewById(R.id.progressBar);
+        int progress = pt%100;
+        pb.setProgress(progress);
+
+
+
+
+
+
+
+
 
 
         c1.setOnClickListener(new View.OnClickListener() {
@@ -68,9 +80,14 @@ public class FragmentPage3 extends Fragment{
             }
         });
         if( pt < 100) {
-            c2.setOnClickListener(null);
+            c2.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                        Toast.makeText(getActivity(), "조금만 더 힘을 내세요!💪\n새로운 친구들이 기다리고 있어요👀", Toast.LENGTH_LONG).show();
+                }
+            });
             c2.setColorFilter(Color.argb(255, 169, 169, 169));
-            c2.setClickable(false);
+            c2.setClickable(true);
         }
         else {
             c2.setClickable(true);
@@ -92,9 +109,14 @@ public class FragmentPage3 extends Fragment{
             });
         }
         if( pt < 200) {
-            c3.setOnClickListener(null);
+            c3.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Toast.makeText(getActivity(), "조금만 더 힘을 내세요!💪\n새로운 친구들이 기다리고 있어요👀", Toast.LENGTH_LONG).show();
+                }
+            });
             c3.setColorFilter(Color.argb(255, 169, 169, 169));
-            c3.setClickable(false);
+            c3.setClickable(true);
         }
         else {
             c3.setClickable(true);
@@ -116,9 +138,14 @@ public class FragmentPage3 extends Fragment{
             });
         }
         if( pt < 300) {
-            c4.setOnClickListener(null);
+            c4.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Toast.makeText(getActivity(), "조금만 더 힘을 내세요!💪\n새로운 친구들이 기다리고 있어요👀", Toast.LENGTH_LONG).show();
+                }
+            });
             c4.setColorFilter(Color.argb(255, 169, 169, 169));
-            c4.setClickable(false);
+            c4.setClickable(true);
         }
         else {
             c4.setClickable(true);
@@ -140,9 +167,14 @@ public class FragmentPage3 extends Fragment{
             });
         }
         if( pt < 400) {
-            c5.setOnClickListener(null);
+            c5.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Toast.makeText(getActivity(), "조금만 더 힘을 내세요!💪\n새로운 친구들이 기다리고 있어요👀", Toast.LENGTH_LONG).show();
+                }
+            });
             c5.setColorFilter(Color.argb(255, 169, 169, 169));
-            c5.setClickable(false);
+            c5.setClickable(true);
         }
         else {
             c5.setClickable(true);
@@ -164,9 +196,14 @@ public class FragmentPage3 extends Fragment{
             });
         }
         if( pt < 500) {
-            c6.setOnClickListener(null);
+            c6.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Toast.makeText(getActivity(), "조금만 더 힘을 내세요!💪\n새로운 친구들이 기다리고 있어요👀", Toast.LENGTH_LONG).show();
+                }
+            });
             c6.setColorFilter(Color.argb(255, 169, 169, 169));
-            c6.setClickable(false);
+            c6.setClickable(true);
         }
         else {
             c6.setClickable(true);
@@ -189,9 +226,14 @@ public class FragmentPage3 extends Fragment{
             });
         }
         if( pt < 600) {
-            c7.setOnClickListener(null);
+            c7.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Toast.makeText(getActivity(), "조금만 더 힘을 내세요!💪\n새로운 친구들이 기다리고 있어요👀", Toast.LENGTH_LONG).show();
+                }
+            });
             c7.setColorFilter(Color.argb(255, 169, 169, 169));
-            c7.setClickable(false);
+            c7.setClickable(true);
         }
         else {
             c7.setClickable(true);
@@ -214,9 +256,14 @@ public class FragmentPage3 extends Fragment{
             });
         }
         if( pt < 700) {
-            c8.setOnClickListener(null);
+            c8.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Toast.makeText(getActivity(), "조금만 더 힘을 내세요!💪\n새로운 친구들이 기다리고 있어요👀", Toast.LENGTH_LONG).show();
+                }
+            });
             c8.setColorFilter(Color.argb(255, 169, 169, 169));
-            c8.setClickable(false);
+            c8.setClickable(true);
         }
         else {
             c8.setClickable(true);
@@ -238,9 +285,14 @@ public class FragmentPage3 extends Fragment{
             });
         }
         if( pt < 800) {
-            c9.setOnClickListener(null);
+            c9.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Toast.makeText(getActivity(), "조금만 더 힘을 내세요!💪\n새로운 친구들이 기다리고 있어요👀", Toast.LENGTH_LONG).show();
+                }
+            });
             c9.setColorFilter(Color.argb(255, 169, 169, 169));
-            c9.setClickable(false);
+            c9.setClickable(true);
         }
         else {
             c9.setClickable(true);
@@ -268,3 +320,4 @@ public class FragmentPage3 extends Fragment{
         super.onViewCreated(view, savedInstanceState);
     }
 }
+

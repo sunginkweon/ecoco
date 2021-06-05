@@ -90,7 +90,7 @@ public class FragmentPage1 extends Fragment {
             }
             if (cb3.isChecked())
             {
-                num_result += 10;
+                num_result += 1;
                 result.append("\n\uD83C\uDF56육류 50g 이하");
             }
             if (cb4.isChecked())

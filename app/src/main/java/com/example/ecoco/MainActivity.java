@@ -140,7 +140,6 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-
     private void BottomNavigate(int id) {  //BottomNavigation 페이지 변경
         String tag = String.valueOf(id);
         FragmentManager fragmentManager = getSupportFragmentManager();
