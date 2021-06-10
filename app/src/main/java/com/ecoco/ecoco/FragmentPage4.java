@@ -1,7 +1,5 @@
-package com.example.ecoco;
+package com.ecoco.ecoco;
 
-import android.app.Activity;
-import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
@@ -13,7 +11,6 @@ import android.widget.Button;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentManager;
 
 public class FragmentPage4 extends Fragment {
 
@@ -70,8 +67,7 @@ public class FragmentPage4 extends Fragment {
         INSTAGRAMecoco.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.instagram.com/invites/contact/?i=1kjss09k255p4&utm_content=ltbyshq"));
-                startActivity(myIntent);
+
             }
         });
         /* id : app_ecoco, pw : ecoco0000*/

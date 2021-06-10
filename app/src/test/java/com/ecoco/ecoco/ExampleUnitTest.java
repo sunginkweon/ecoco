@@ -1,4 +1,4 @@
-package com.example.ecoco;
+package com.ecoco.ecoco;
 
 import org.junit.Test;
 

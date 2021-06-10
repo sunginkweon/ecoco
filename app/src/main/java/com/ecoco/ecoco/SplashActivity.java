@@ -1,4 +1,4 @@
-package com.example.ecoco;
+package com.ecoco.ecoco;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;

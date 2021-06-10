@@ -1,11 +1,7 @@
-package com.example.ecoco;
+package com.ecoco.ecoco;
 
 import android.annotation.SuppressLint;
-import android.app.Activity;
-import android.content.Context;
-import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -20,9 +16,6 @@ import androidx.fragment.app.Fragment;
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
-import java.util.Objects;
-
-import static android.content.Context.MODE_PRIVATE;
 
 public class FragmentPage1 extends Fragment {
     @SuppressLint("SimpleDateFormat")

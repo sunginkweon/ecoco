@@ -1,10 +1,9 @@
-package com.example.ecoco;
+package com.ecoco.ecoco;
 
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Build;
 import android.os.Bundle;
-import android.os.Handler;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -18,7 +17,6 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.annotation.RequiresApi;
 import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentTransaction;
 
 public class FragmentPage3 extends Fragment{
 
@@ -126,7 +124,7 @@ public class FragmentPage3 extends Fragment{
                 public void onClick(View view) {
                     mainC.setImageResource(R.drawable.marmotte);
                     name.setText("마모트");
-                    detail.setText("동면에 들어가야 하는데 이상기후로 일찍 깨거나 아예 동면하지 못하기에 겨울철에 잡아먹힐 위험성도 높고 겨울철동안 먹이도 충분하지 않게 된다.");
+                    detail.setText("동면에 들어가야 하는데 이상기후로 일찍 깨거나 아예 동면하지 못하기에 겨울철에 잡아먹힐 위험성도 높고 겨울철동안 먹이도 충분하지 않게 됩니다.");
                     buttonForDetail.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View view) {
@@ -184,7 +182,7 @@ public class FragmentPage3 extends Fragment{
                 public void onClick(View view) {
                     mainC.setImageResource(R.drawable.odobenus);
                     name.setText("바다코끼리");
-                    detail.setText("새끼바다코끼리는 2년동안 사냥을 못하는데 이때 어미가 사냥을 할 동안 쉬고 있을 유빙이 사라지고 있다.");
+                    detail.setText("새끼바다코끼리는 2년동안 사냥을 못하는데 이때 어미가 사냥을 할 동안 쉬고 있을 유빙이 사라지고 있습니다.");
                     buttonForDetail.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View view) {
@@ -243,7 +241,7 @@ public class FragmentPage3 extends Fragment{
                 public void onClick(View view) {
                     mainC.setImageResource(R.drawable.polarbear);
                     name.setText("북극곰");
-                    detail.setText("빙하가 사라져 터전도 사라지고 수온 상승으로 인해 적절한 사냥감도 줄어들고 있다.");
+                    detail.setText("빙하가 사라져 터전도 사라지고 수온 상승으로 인해 적절한 사냥감도 줄어들고 있습니다.");
                     buttonForDetail.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View view) {

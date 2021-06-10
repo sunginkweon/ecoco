@@ -1,17 +1,17 @@
-package com.example.ecoco;
-
-import androidx.appcompat.app.AppCompatActivity;
+package com.ecoco.ecoco;
 
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class CharacterDetail_ochotonidae extends AppCompatActivity {
+import androidx.appcompat.app.AppCompatActivity;
+
+public class CharacterDetail_marmotte extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_character_detail_ochotonidae);
+        setContentView(R.layout.activity_character_detail_marmotte);
 
         Button finishBtn = findViewById(R.id.Back);
         finishBtn.setOnClickListener(new View.OnClickListener() {

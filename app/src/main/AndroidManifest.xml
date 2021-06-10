@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.ecoco">
+    package="com.ecoco.ecoco">
 
     <application
         android:allowBackup="true"
@@ -10,23 +10,23 @@
         android:roundIcon="@mipmap/ic_main_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Ecoco">
-        <activity android:name=".CharacterDetail_ochotonidae"></activity>
-        <activity android:name=".CharacterDetail_chipmunk"></activity>
-        <activity android:name=".CharacterDetail_marmotte"></activity>
-        <activity android:name=".CharacterDetail_cheetah"></activity>
-        <activity android:name=".CharacterDetail_odobenus"></activity>
-        <activity android:name=".CharacterDetail_panda"></activity>
-        <activity android:name=".CharacterDetail_polarbear"></activity>
-        <activity android:name=".CharacterDetail_tiger"></activity>
-        <activity android:name=".CharacterDetail_turtle"></activity>
+        <activity android:name="com.ecoco.ecoco.CharacterDetail_ochotonidae"></activity>
+        <activity android:name="com.ecoco.ecoco.CharacterDetail_chipmunk"></activity>
+        <activity android:name="com.ecoco.ecoco.CharacterDetail_marmotte"></activity>
+        <activity android:name="com.ecoco.ecoco.CharacterDetail_cheetah"></activity>
+        <activity android:name="com.ecoco.ecoco.CharacterDetail_odobenus"></activity>
+        <activity android:name="com.ecoco.ecoco.CharacterDetail_panda"></activity>
+        <activity android:name="com.ecoco.ecoco.CharacterDetail_polarbear"></activity>
+        <activity android:name="com.ecoco.ecoco.CharacterDetail_tiger"></activity>
+        <activity android:name="com.ecoco.ecoco.CharacterDetail_turtle"></activity>
 
 
-        <activity android:name=".developers" />
+        <activity android:name="com.ecoco.ecoco.developers" />
         <activity android:name=".UserData" />
         <activity
-            android:name=".MainActivity"
+            android:name="com.ecoco.ecoco.MainActivity"
             android:windowSoftInputMode="adjustPan" />
-        <activity android:name=".SplashActivity">
+        <activity android:name="com.ecoco.ecoco.SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
